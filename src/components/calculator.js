@@ -9,7 +9,7 @@ const Calculator = () => (
       <div className="grid-item light-grey">AC</div>
       <div className="grid-item light-grey">+/-</div>
       <div className="grid-item light-grey">%</div>
-      <div className="grid-item orange">+</div>
+      <div className="grid-item orange">*</div>
       <div className="grid-item light-grey">7</div>
       <div className="grid-item light-grey">8</div>
       <div className="grid-item light-grey">9</div>

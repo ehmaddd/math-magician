@@ -3,13 +3,11 @@
 }
 
 body {
-  background-color: aliceblue;
   text-align: center;
 }
 
 .calculator {
-  border: 2px solid black;
-  width: 30%;
+  width: 35%;
 }
 
 #root {
@@ -49,8 +47,8 @@ body {
 .grid-item {
   background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid white;
-  padding: 15px;
-  font-size: 20px;
+  padding: 20px;
+  font-size: 12px;
   font-weight: 500;
   text-align: center;
 }
@@ -65,5 +63,5 @@ body {
 }
 
 .orange {
-  background-color: orange;
+  background-color: #f5913e;
 }

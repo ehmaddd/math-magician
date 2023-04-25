@@ -176,6 +176,6 @@ I would like to thank microverse for giving me such a magnificant chance to crea
 
 ## 📝 License <a name="license"></a>
 
-This project is <a href='https://github.com/ehmaddd/math-magician/blob/initial-setup/LICENSE'>MIT</a> licensed.
+This project is <a href='https://github.com/ehmaddd/math-magician/blob/basic-structure/LICENSE'>MIT</a> licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
