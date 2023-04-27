@@ -1,34 +1,33 @@
 /* eslint-disable react/button-has-type */
 import { PropTypes } from 'prop-types';
+import { useState } from 'react';
 import calculate from '../logic/calculate';
 
-let counter = 0;
-let obj;
+// let counter = 0;
 const ans = document.querySelector('.answer');
 
 const Calculator = () => {
-  obj = {
-    total: null,
-    next: null,
-    operation: 'null',
-  };
+  const [totalVal, setTotalVal] = useState(null);
+  const [nextVal, setNextVal] = useState(null);
+  const [operationVal, setOperationVal] = useState(null);
 
   const onClickHandler = (e) => {
-    const res = calculate(obj, e.target.innerHTML);
-    obj = res;
-    if (counter === 0) {
-      obj = {
-        next: res.next,
-        total: null,
-      };
-    }
-    counter = 1;
+    const res = calculate({
+      total: totalVal,
+      next: nextVal,
+      operation: operationVal,
+    }, e.target.innerHTML);
     const ans = document.querySelector('.answer');
-    ans.innerHTML = (!obj.next) ? obj.total : obj.next;
+    setTotalVal(res.total);
+    setNextVal(res.next);
+    setOperationVal(res.operation);
+    ans.innerHTML = (!res.next) ? res.total : res.next;
   };
+
   const onHandleKeyDown = () => {
     ans.innerHTML = 'E';
   };
+
   return (
     <div className="calculator">
       <div className="grid-container">
