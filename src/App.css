@@ -2,10 +2,6 @@
   box-sizing: border-box;
 }
 
-body {
-  text-align: center;
-}
-
 .calculator {
   width: 35%;
 }
@@ -14,6 +10,7 @@ body {
   margin-top: 10%;
   display: flex;
   justify-content: space-around;
+  width: 100%;
 }
 
 .answer {
@@ -64,4 +61,27 @@ body {
 
 .orange {
   background-color: #f5913e;
+}
+
+.quote {
+  width: 35rem;
+  display: flex;
+  align-items: center;
+}
+
+.quote ul {
+  list-style-type: none;
+}
+
+.quote li {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.quote .code-2 {
+  float: right;
+}
+
+code {
+  font-size: 3rem;
 }
