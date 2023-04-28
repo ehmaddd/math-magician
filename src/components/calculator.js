@@ -4,10 +4,7 @@ import calculate from '../logic/calculate';
 
 const ans = document.querySelector('.answer');
 
-const Calculator = () => {
-  const [totalVal, setTotalVal] = useState(null);
-  const [nextVal, setNextVal] = useState(null);
-  const [operationVal, setOperationVal] = useState(null);
+const Quotes = () => {
   const [data, setData] = useState([]);
   const [hasError, setHasError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -34,6 +31,28 @@ const Calculator = () => {
   if (hasError) return <div>Something went wrong!</div>;
 
   if (isLoading) return <div>Loading...</div>;
+
+  return (
+    <div className="quote">
+      <ul>
+        {data.map((item) => (
+          <>
+            <code> &quot; </code>
+            <li key={item.author}>
+              {item.quote}
+            </li>
+            <code className="code-2"> &nbsp; &quot; </code>
+          </>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+const Calculator = () => {
+  const [totalVal, setTotalVal] = useState(null);
+  const [nextVal, setNextVal] = useState(null);
+  const [operationVal, setOperationVal] = useState(null);
 
   const onClickHandler = (e) => {
     const res = calculate({
@@ -63,40 +82,24 @@ const Calculator = () => {
           <Item val="+/-" onClick={onClickHandler} />
           <Item val="%" onClick={onClickHandler} />
           <Operators val="÷" onClick={onClickHandler} />
-
           <Item val="7" onClick={onClickHandler} />
           <Item val="8" onClick={onClickHandler} />
           <Item val="9" onClick={onClickHandler} />
           <Operators val="x" onClick={onClickHandler} />
-
           <Item val="4" onClick={onClickHandler} />
           <Item val="5" onClick={onClickHandler} />
           <Item val="6" onClick={onClickHandler} />
           <Operators val="-" onClick={onClickHandler} />
-
           <Item val="1" onClick={onClickHandler} />
           <Item val="2" onClick={onClickHandler} />
           <Item val="3" onClick={onClickHandler} />
           <Operators val="+" onClick={onClickHandler} onKeyDown={onHandleKeyDown} />
-
           <Zero onClick={onClickHandler} />
           <Item val="." onClick={onClickHandler} onKeyDown={onHandleKeyDown} />
           <Operators val="=" onClick={onClickHandler} />
         </div>
       </div>
-      <div className="quote">
-        <ul>
-          {data.map((item) => (
-            <>
-              <code> &quot; </code>
-              <li key={item.author}>
-                {item.quote}
-              </li>
-              <code className="code-2"> &nbsp; &quot; </code>
-            </>
-          ))}
-        </ul>
-      </div>
+      <Quotes />
     </>
   );
 };
