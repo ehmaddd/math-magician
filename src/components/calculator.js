@@ -1,9 +1,8 @@
-/* eslint-disable react/button-has-type */
 import { PropTypes } from 'prop-types';
 import { useState } from 'react';
 import calculate from '../logic/calculate';
+import Quotes from './quotes';
 
-// let counter = 0;
 const ans = document.querySelector('.answer');
 
 const Calculator = () => {
@@ -29,37 +28,35 @@ const Calculator = () => {
   };
 
   return (
-    <div className="calculator">
-      <div className="grid-container">
-        <div className="grid-item" id="answer-div">
-          <Result val="0" />
+    <>
+      <div className="calculator">
+        <div className="grid-container">
+          <div className="grid-item" id="answer-div">
+            <Result val="0" />
+          </div>
+          <Item val="AC" onClick={onClickHandler} />
+          <Item val="+/-" onClick={onClickHandler} />
+          <Item val="%" onClick={onClickHandler} />
+          <Operators val="÷" onClick={onClickHandler} />
+          <Item val="7" onClick={onClickHandler} />
+          <Item val="8" onClick={onClickHandler} />
+          <Item val="9" onClick={onClickHandler} />
+          <Operators val="x" onClick={onClickHandler} />
+          <Item val="4" onClick={onClickHandler} />
+          <Item val="5" onClick={onClickHandler} />
+          <Item val="6" onClick={onClickHandler} />
+          <Operators val="-" onClick={onClickHandler} />
+          <Item val="1" onClick={onClickHandler} />
+          <Item val="2" onClick={onClickHandler} />
+          <Item val="3" onClick={onClickHandler} />
+          <Operators val="+" onClick={onClickHandler} onKeyDown={onHandleKeyDown} />
+          <Zero onClick={onClickHandler} />
+          <Item val="." onClick={onClickHandler} onKeyDown={onHandleKeyDown} />
+          <Operators val="=" onClick={onClickHandler} />
         </div>
-        <Item val="AC" onClick={onClickHandler} />
-        <Item val="+/-" onClick={onClickHandler} />
-        <Item val="%" onClick={onClickHandler} />
-        <Operators val="÷" onClick={onClickHandler} />
-
-        <Item val="7" onClick={onClickHandler} />
-        <Item val="8" onClick={onClickHandler} />
-        <Item val="9" onClick={onClickHandler} />
-        <Operators val="x" onClick={onClickHandler} />
-
-        <Item val="4" onClick={onClickHandler} />
-        <Item val="5" onClick={onClickHandler} />
-        <Item val="6" onClick={onClickHandler} />
-        <Operators val="-" onClick={onClickHandler} />
-
-        <Item val="1" onClick={onClickHandler} />
-        <Item val="2" onClick={onClickHandler} />
-        <Item val="3" onClick={onClickHandler} />
-        <Operators val="+" onClick={onClickHandler} onKeyDown={onHandleKeyDown} />
-
-        <Zero onClick={onClickHandler} />
-        <Item val="." onClick={onClickHandler} onKeyDown={onHandleKeyDown} />
-        <Operators val="=" onClick={onClickHandler} />
-
       </div>
-    </div>
+      <Quotes />
+    </>
   );
 };
 
