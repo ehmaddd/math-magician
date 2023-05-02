@@ -1,7 +1,6 @@
 import { PropTypes } from 'prop-types';
 import { useState } from 'react';
 import calculate from '../logic/calculate';
-import Quotes from './quotes';
 
 const ans = document.querySelector('.answer');
 
@@ -29,6 +28,7 @@ const Calculator = () => {
 
   return (
     <>
+      <p className="calc-info">Let&apos;s do some Math!</p>
       <div className="calculator">
         <div className="grid-container">
           <div className="grid-item" id="answer-div">
@@ -55,7 +55,6 @@ const Calculator = () => {
           <Operators val="=" onClick={onClickHandler} />
         </div>
       </div>
-      <Quotes />
     </>
   );
 };

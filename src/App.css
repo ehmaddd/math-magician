@@ -1,16 +1,28 @@
+body {
+  background-image: url('./images/bg.jpg');
+  background-size: cover;
+}
+
 * {
   box-sizing: border-box;
 }
 
 .calculator {
   width: 35%;
+  margin-top: 10%;
+  margin-left: 20%;
+}
+
+.calc-info {
+  margin-top: 10%;
+  font-size: 2rem;
+  margin-left: 10%;
 }
 
 #root {
-  margin-top: 10%;
   display: flex;
-  justify-content: space-around;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .answer {
@@ -64,18 +76,36 @@
 }
 
 .quote {
-  width: 35rem;
+  width: 100%;
   display: flex;
   align-items: center;
+  padding: 15% 20%;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 8%;
 }
 
 .quote ul {
   list-style-type: none;
 }
 
+nav * {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: blue;
+}
+
 .quote li {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+nav li:hover {
+  font-size: 1.25rem;
+  text-shadow: 1px 1px #f5913e;
 }
 
 .quote .code-2 {
@@ -84,4 +114,30 @@
 
 code {
   font-size: 3rem;
+}
+
+nav {
+  display: block;
+  margin-bottom: 10%;
+  position: absolute;
+  right: 7%;
+}
+
+.title {
+  position: absolute;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2rem;
+}
+
+.welcome-note {
+  margin-top: 20%;
+  font-size: 2.3rem;
+}
+
+.home p {
+  font-size: 1.4rem;
+}
+
+.home {
+  margin: 5% 20%;
 }
