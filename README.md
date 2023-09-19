@@ -132,7 +132,7 @@ npm run build
 
 - <a href='https://github.com/ehmaddd/'>GitHub</a>
 - <a href='https://twitter.com/ehmaddd_pk'>Twitter</a>
-- <a href='https://www.linkedin.com/in/ahmad-saeed-734174148'>LinkedIn</a>
+- <a href='https://www.linkedin.com/in/ehmaddd'>LinkedIn</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -176,6 +176,6 @@ I would like to thank microverse for giving me such a magnificant chance to crea
 
 ## 📝 License <a name="license"></a>
 
-This project is <https://github.com/ehmaddd/math-magician/blob/router-branch/LICENSE>MIT</a> licensed.
+This project is <a href="./LICENSE">MIT</a> licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
